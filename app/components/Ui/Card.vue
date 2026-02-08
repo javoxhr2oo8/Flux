@@ -25,6 +25,8 @@
     cursor: pointer;
     transition: all 0.3s ease;
 
+    overflow-y: auto;
+
     @media screen and (max-width: 550px) {
         padding: 7px;
         border-radius: 10px;
