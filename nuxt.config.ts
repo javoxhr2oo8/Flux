@@ -4,11 +4,16 @@ export default defineNuxtConfig({
   css: ['~/assets/scss/main.scss'],
   components: [
     {
-      path: "~/components/ui",
-      pathPrefix: false,
-      global: true
+      path: '~/components/ui',
+      pathPrefix: false, // Чтобы писать <Button />, а не <UiButton />
+      global: true,
+      extensions: ['.vue'], // Явно укажи расширения
     },
-    '~/components'
+    {
+      path: '~/components',
+      // Ограничь сканирование основной папки, чтобы она не лезла в /ui повторно
+      ignore: ['ui/**']
+    }
   ],
   app: {
     head: {
