@@ -2,19 +2,14 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   css: ['~/assets/scss/main.scss'],
-  components: [
-    {
-      path: '~/components/ui',
-      pathPrefix: false, // Чтобы писать <Button />, а не <UiButton />
-      global: true,
-      extensions: ['.vue'], // Явно укажи расширения
-    },
-    {
-      path: '~/components',
-      // Ограничь сканирование основной папки, чтобы она не лезла в /ui повторно
-      ignore: ['ui/**']
-    }
-  ],
+  // components: [
+  //   {
+  //     path: "~/components/ui",
+  //     pathPrefix: false,
+  //     global: true
+  //   },
+  //   '~/components'
+  // ],
   app: {
     head: {
       link: [

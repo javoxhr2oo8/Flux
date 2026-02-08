@@ -1,4 +1,6 @@
 <script setup>
+import FlexBox from './FlexBox.vue';
+import Button from './Button.vue';
 const { item } = defineProps(['item'])
 </script>
 

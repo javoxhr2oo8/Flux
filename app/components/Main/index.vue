@@ -1,4 +1,8 @@
 <script setup>
+import FlexBox from '../Ui/FlexBox.vue';
+import Card from '../Ui/Card.vue';
+import Button from '../Ui/Button.vue';
+import CardContent from '../Ui/CardContent.vue';
 const moreProductsSwitch = ref(false)
 </script>
 
