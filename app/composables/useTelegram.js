@@ -16,7 +16,7 @@ export const useTelegram = () => {
         tg?.HapticFeedback.notificationOccurred(type);
     };
 
-    const hapticImpact = (style = 'medium') => {
+    const hapticImpact = (style = 'light') => {
         tg?.HapticFeedback.impactOccurred(style);
     };
 
