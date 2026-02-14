@@ -38,6 +38,8 @@ button {
     transition: all 0.3s ease;
     outline: none;
 
+    -webkit-tap-highlight-color: transparent;
+
     &:active {
         transform: scale(0.96);
     }
