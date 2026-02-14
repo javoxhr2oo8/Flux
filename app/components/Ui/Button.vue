@@ -9,17 +9,18 @@ onMounted(() => {
 </script>
 
 <template>
-    <button :style="{ 'color': color, 'background': bg, 'width': width ? width : '100%' }">
-        <slot v-if="!loading" />
+    <button :style="{ 'color': color, 'background': bg, 'width': width ? width : '100%' }" :class="{'loadingStaus': loading}">
         <div class="lds-ring" v-if="loading">
             <div></div>
             <div></div>
             <div></div>
             <div></div>
         </div>
+        <slot/>
     </button>
 </template>
 
+<!-- scoped styles -->
 <style lang="scss" scoped>
 button {
     width: 100%;
@@ -75,7 +76,7 @@ button {
     position: absolute;
     width: 20px;
     height: 20px;
-    border: 8px solid currentColor;
+    border: 5px solid currentColor;
     border-radius: 50%;
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
     border-color: currentColor transparent transparent transparent;
@@ -100,6 +101,15 @@ button {
 
     100% {
         transform: rotate(360deg);
+    }
+}
+</style>
+
+<!-- global imortant styles  -->
+<style lang="scss">
+.loadingStaus {
+    i {
+        display: none !important;
     }
 }
 </style>

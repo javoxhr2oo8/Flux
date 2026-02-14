@@ -2,6 +2,8 @@
 import FlexBox from './FlexBox.vue';
 import Button from './Button.vue';
 const { item } = defineProps(['item'])
+
+const buttonLoadingStatus = ref(false)
 </script>
 
 <template>
@@ -21,7 +23,7 @@ const { item } = defineProps(['item'])
                 <i class="fa-solid fa-pencil"></i>
                 Редактировать
             </Button>
-            <Button bg="#036603">
+            <Button bg="#036603" @click="buttonLoadingStatus = !buttonLoadingStatus" :loading="buttonLoadingStatus">
                 <i class="fa-solid fa-check"></i>
                 Завершить
             </Button>
