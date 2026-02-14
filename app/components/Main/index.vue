@@ -4,12 +4,23 @@ import Card from '../Ui/Card.vue';
 import Button from '../Ui/Button.vue';
 import CardContent from '../Ui/CardContent.vue';
 const moreProductsSwitch = ref(false)
+
+const { user, showAlert, closeApp, tg } = useTelegram();
+
+onMounted(() => {
+  if (tg) {
+    tg.ready();
+    tg.expand();
+  }
+});
 </script>
 
 <template>
     <div class="main">
         <div class="container">
             <div class="main-wrapper">
+
+                <pre>{{ user ? user : 'not' }}</pre>
 
                 <FlexBox direction="column" gap="10px">
                     <FlexBox direction="column" gap="10px">

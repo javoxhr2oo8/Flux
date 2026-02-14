@@ -18,6 +18,9 @@ export default defineNuxtConfig({
           href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css'
         },
         { rel: 'icon', type: 'image/png', href: '/2.png' }
+      ],
+      script: [
+        { src: 'https://telegram.org/js/telegram-web-app.js', defer: true }
       ]
     }
   },
