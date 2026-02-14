@@ -1,10 +1,16 @@
 <script setup>
 const { color, bg, loading = false, width } = defineProps(['color', 'bg', 'loading', 'width'])
+
+onMounted(() => {
+    document.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('touchstart', function () { }, { passive: true });
+    });
+})
 </script>
 
 <template>
     <button :style="{ 'color': color, 'background': bg, 'width': width ? width : '100%' }">
-        <slot v-if="!loading"/>
+        <slot v-if="!loading" />
         <div class="lds-ring" v-if="loading">
             <div></div>
             <div></div>
@@ -30,7 +36,7 @@ button {
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
