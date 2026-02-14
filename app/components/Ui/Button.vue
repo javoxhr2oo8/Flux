@@ -1,5 +1,7 @@
 <script setup>
-const { color, bg, loading = false, width } = defineProps(['color', 'bg', 'loading', 'width'])
+const { color, bg, loading = false, width, vibrate } = defineProps(['color', 'bg', 'loading', 'width'])
+
+const { hapticImpact } = useTelegram()
 
 onMounted(() => {
     document.querySelectorAll('button').forEach(btn => {
@@ -9,14 +11,15 @@ onMounted(() => {
 </script>
 
 <template>
-    <button :style="{ 'color': color, 'background': bg, 'width': width ? width : '100%' }" :class="{'loadingStaus': loading}">
+    <button :style="{ 'color': color, 'background': bg, 'width': width ? width : '100%' }"
+        :class="{ 'loadingStaus': loading }" @click="hapticImpact(vibrate)">
         <div class="lds-ring" v-if="loading">
             <div></div>
             <div></div>
             <div></div>
             <div></div>
         </div>
-        <slot/>
+        <slot />
     </button>
 </template>
 

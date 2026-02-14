@@ -12,6 +12,14 @@ export const useTelegram = () => {
         tg?.showAlert(message);
     };
 
+    const hapticNotification = (type) => {
+        tg?.HapticFeedback.notificationOccurred(type);
+    };
+
+    const hapticImpact = (style = 'medium') => {
+        tg?.HapticFeedback.impactOccurred(style);
+    };
+
     const showMainButton = (text, onClick) => {
         if (tg) {
             tg.MainButton.text = text;
@@ -26,6 +34,8 @@ export const useTelegram = () => {
         closeApp,
         showAlert,
         showMainButton,
+        hapticNotification,
+        hapticImpact,
         isReady: !!tg,
         initData: tg?.initData || '',
         themeParams: tg?.themeParams || {}
