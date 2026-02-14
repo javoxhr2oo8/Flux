@@ -42,6 +42,7 @@ button {
 
     &:active {
         transform: scale(0.96);
+        opacity: 0.7;
     }
 
     @media screen and (max-width: 550px) {
