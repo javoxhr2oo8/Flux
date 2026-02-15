@@ -2,7 +2,7 @@
 const { setHeaderColor } = useTelegram()
 
 onMounted(()=> {
-  setHeaderColor("#ffffff")
+  setHeaderColor("#2f3031")
 })
 </script>
 
