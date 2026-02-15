@@ -17,6 +17,10 @@ body {
     // background: #1e1f20;
     background: #1e1f20;
     color: #fff;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
 }
 
 .container {
