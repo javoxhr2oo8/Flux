@@ -2,8 +2,6 @@
 import Button from '../Ui/Button.vue';
 import Card from '../Ui/Card.vue';
 import FlexBox from '../Ui/FlexBox.vue';
-
-const {user} = useTelegram()
 </script>
 
 <template>
@@ -15,7 +13,7 @@ const {user} = useTelegram()
                     <div class="header-right">
                         <FlexBox items="center" gap="10px">
                             <Button class="reload-app-btn"><i class="fas fa-sync"></i></Button>
-                                <img :src="user ? user?.photo_url :  'https://cdn3.iconfinder.com/data/icons/basicolor-essentials/24/051_user_profile_avatar-1024.png' " alt="">
+                                <img src="'https://cdn3.iconfinder.com/data/icons/basicolor-essentials/24/051_user_profile_avatar-1024.png'" alt="">
                         </FlexBox> 
                     </div>
                 </FlexBox>
