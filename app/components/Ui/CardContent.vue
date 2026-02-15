@@ -18,11 +18,13 @@ const buttonLoadingStatus = ref(false)
         <p>
             Себестоимость: 150 000 uzs
         </p>
+
         <FlexBox gap="5px">
             <Button bg="#ca7700">
                 <i class="fa-solid fa-pencil"></i>
                 Изменить
             </Button>
+
             <Button class="confirm-btn" bg="#036603" @click="buttonLoadingStatus = !buttonLoadingStatus" :loading="buttonLoadingStatus">
                 <i class="fa-solid fa-check"></i>
             </Button>
