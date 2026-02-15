@@ -17,6 +17,7 @@ const { user } = useTelegram()
                             <Button class="reload-app-btn"><i class="fas fa-sync"></i></Button>
                             <img v-if="user?.photo_url" :src="user.photo_url" alt="User Avatar" class="user-avatar"
                                 @error="(e) => e.target.src = 'https://via.placeholder.com/40'" />
+                                <img v-else src="https://cdn3.iconfinder.com/data/icons/basicolor-essentials/24/051_user_profile_avatar-1024.png" alt="">
                         </FlexBox>
                     </div>
                 </FlexBox>
