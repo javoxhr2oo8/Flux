@@ -23,7 +23,7 @@ const buttonLoadingStatus = ref(false)
                 <i class="fa-solid fa-pencil"></i>
                 Изменить
             </Button>
-            <Button bg="#036603" @click="buttonLoadingStatus = !buttonLoadingStatus" :loading="buttonLoadingStatus">
+            <Button class="confirm-btn" bg="#036603" @click="buttonLoadingStatus = !buttonLoadingStatus" :loading="buttonLoadingStatus">
                 <i class="fa-solid fa-check"></i>
             </Button>
         </FlexBox>
@@ -54,5 +54,9 @@ p {
     @media screen and (max-width: 550px) {
         font-size: 14px;
     }
+}
+
+.confirm-btn {
+    width: 50px !important;
 }
 </style>
