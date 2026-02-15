@@ -12,26 +12,13 @@ const moreProductsSwitch = ref(false)
             <div class="main-wrapper">
 
                 <FlexBox direction="column" gap="10px">
-                    <FlexBox direction="column" gap="10px">
-                        <Card>
-                            <FlexBox gap="5px">
-                                <Button><i class="fa-solid fa-chart-line"></i>Статистика</Button>
-                                <Button><i class="fa-solid fa-comment"></i>Обсуждения</Button>
-                            </FlexBox>
-                        </Card>
-
-                        <Card>
-                            <Button><i class="fas fa-plus"></i>Добавить</Button>
-                        </Card>
-
-                        <Card>
-                            <FlexBox items="center" gap="5px">
-                                <Button><i class="fa-solid fa-bolt"></i>Активный</Button>
-                                <Button><i class="fa-solid fa-pen-nib"></i>Черновик</Button>
-                                <Button><i class="fa-solid fa-check"></i>Завершён</Button>
-                            </FlexBox>
-                        </Card>
-                    </FlexBox>
+                    <Card>
+                        <FlexBox items="center" gap="5px">
+                            <Button><i class="fa-solid fa-bolt"></i>Активный</Button>
+                            <Button><i class="fa-solid fa-pen-nib"></i>Черновик</Button>
+                            <Button><i class="fa-solid fa-check"></i>Завершён</Button>
+                        </FlexBox>
+                    </Card>
 
                     <FlexBox direction="column" gap="5px">
                         <Card v-for="item in 3">
