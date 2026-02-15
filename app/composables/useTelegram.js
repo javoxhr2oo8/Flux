@@ -28,6 +28,12 @@ export const useTelegram = () => {
         }
     };
 
+    const setHeaderColor = (color) => {
+        if (tg) {
+            tg.setHeaderColor(color);
+        }
+    };
+
     return {
         tg,
         user,
@@ -36,6 +42,7 @@ export const useTelegram = () => {
         showMainButton,
         hapticNotification,
         hapticImpact,
+        setHeaderColor,
         isReady: !!tg,
         initData: tg?.initData || '',
         themeParams: tg?.themeParams || {}
