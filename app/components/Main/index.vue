@@ -3,6 +3,7 @@ import FlexBox from '../Ui/FlexBox.vue';
 import Card from '../Ui/Card.vue';
 import Button from '../Ui/Button.vue';
 import CardContent from '../Ui/CardContent.vue';
+import GridBox from '../Ui/GridBox.vue';
 const moreProductsSwitch = ref(false)
 </script>
 
@@ -20,11 +21,11 @@ const moreProductsSwitch = ref(false)
                         </FlexBox>
                     </Card>
 
-                    <FlexBox direction="column" gap="5px">
-                        <Card v-for="item in 3">
+                    <GridBox>
+                        <Card v-for="item in 8">
                             <CardContent :item="item" />
                         </Card>
-                    </FlexBox>
+                    </GridBox>
 
                     <Card>
                         <Button :loading="moreProductsSwitch"

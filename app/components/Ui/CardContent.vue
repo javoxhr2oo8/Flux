@@ -8,7 +8,7 @@ const buttonLoadingStatus = ref(false)
 
 <template>
     <FlexBox direction="column" gap="10px">
-        <h2>Называния: Ipad mini 7</h2>
+        <h2>Ipad mini 7</h2>
         <p>
             Серийный номер: DH/7Phdgf
         </p>
@@ -21,18 +21,12 @@ const buttonLoadingStatus = ref(false)
         <FlexBox gap="5px">
             <Button bg="#ca7700">
                 <i class="fa-solid fa-pencil"></i>
-                Редактировать
+                Изменить
             </Button>
             <Button bg="#036603" @click="buttonLoadingStatus = !buttonLoadingStatus" :loading="buttonLoadingStatus">
                 <i class="fa-solid fa-check"></i>
-                Завершить
             </Button>
         </FlexBox>
-        
-        <Button bg="#1a5590">
-            <i class="fa-solid fa-pen-nib"></i>
-            Добавить в черновик
-        </Button>
     </FlexBox>
 </template>
 
